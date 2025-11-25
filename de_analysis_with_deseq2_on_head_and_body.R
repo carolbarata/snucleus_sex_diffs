@@ -70,7 +70,7 @@ for (tissue in tissues) {
   
   ## Write results to file ##
   write.table(deseq_results_df,
-            paste0("deseq_results_from_raw_relaxed_", tolower(tissue), "_per_tissue_try2.csv"),
+            paste0("deseq_results_from_raw_relaxed_", tolower(tissue), "_per_tissue.csv"),
             sep = ",",
             quote = FALSE,
             col.names = TRUE,
@@ -184,14 +184,14 @@ for (tissue in tissues) {
                                                    data_df = data_for_deseq2)
     if (match(cluster, clusters) == 1) {
       write.table(deseq_results_df,
-                paste0("deseq_results_from_raw_relaxed_", tolower(tissue), "_per_cluster_try2.csv"),
+                paste0("deseq_results_from_raw_relaxed_", tolower(tissue), "_per_cluster.csv"),
                 sep = ",",
                 quote = FALSE,
                 col.names = TRUE,
                 row.names = FALSE)
     } else {
       write.table(deseq_results_df,
-                paste0("deseq_results_from_raw_relaxed_", tolower(tissue), "_per_cluster_try2.csv"),
+                paste0("deseq_results_from_raw_relaxed_", tolower(tissue), "_per_cluster.csv"),
                 sep = ",",
                 quote = FALSE,
                 col.names = FALSE,
@@ -208,3 +208,4 @@ for (tissue in tissues) {
   rm(clusters)
   gc()  
 }
+
