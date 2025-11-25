@@ -1,0 +1,37 @@
+"tissue","cluster","status","pvalue","odds_ratio"
+"body","epithelial cell","female-biased",1.76355990686195e-06,1.65043406717686
+"body","epithelial cell","male-biased",6.48236037094619e-06,0.53526198086511
+"body","fat cell","female-biased",0.140047106403175,1.27607665177403
+"body","fat cell","male-biased",0.0222239908812086,0.542024843402208
+"body","glial cell","female-biased",0.00307866846161856,1.44672999840124
+"body","glial cell","male-biased",0.000318414124316889,0.510705840901745
+"body","hemocyte","female-biased",0.122954402182181,1.47992516736505
+"body","hemocyte","male-biased",0.127323622759767,0.449681787805552
+"body","muscle cell","female-biased",0.0812213510743543,1.20859186579143
+"body","muscle cell","male-biased",1.32584672602052e-08,0.536233219200379
+"body","neuron","female-biased",0.0476229221452806,1.35595596020623
+"body","neuron","male-biased",0.00836264912620942,0.507090944302305
+"body","oenocyte","female-biased",0.0362778542195263,1.56122543755301
+"body","oenocyte","male-biased",0.025864997453539,0.37687094627463
+"body","sensory neuron","female-biased",0.124529582391748,1.38919745984492
+"body","sensory neuron","male-biased",0.0104039180376858,0.329495396554277
+"body","tracheolar cell","female-biased",0.130086872804229,1.22683562474343
+"body","tracheolar cell","male-biased",0.0675859111909566,0.638699481402656
+"body","unannotated","female-biased",8.4967792041935e-17,2.35602471946449
+"body","unannotated","male-biased",1.22070685085904e-09,0.457238489563619
+"head","epithelial cell","female-biased",0.102135381536994,1.89295127861284
+"head","epithelial cell","male-biased",0.784680877247246,1.06072351467285
+"head","fat cell","female-biased",0.26980897932934,1.68119954593009
+"head","fat cell","male-biased",0.410699644099989,0.45747744847367
+"head","glial cell","female-biased",0.00146376140037812,3.2887756505562
+"head","glial cell","male-biased",0.726261580192998,1.25981634662139
+"head","hemocyte","female-biased",0.455287661300937,1.60854870597684
+"head","hemocyte","male-biased",0.371310596545498,2.35992415125166
+"head","muscle cell","female-biased",1,1.03079271850244
+"head","muscle cell","male-biased",0.617853857778713,1.78737533434484
+"head","neuron","female-biased",0.00509151879678863,2.85879093472398
+"head","neuron","male-biased",0.0193044544399002,2.76107582132534
+"head","sensory neuron","female-biased",0.00263448672824853,3.19431660209721
+"head","sensory neuron","male-biased",0.775586313626202,1.11977848574497
+"head","unannotated","female-biased",0.00257235894723521,2.81168409465349
+"head","unannotated","male-biased",0.00622336388833876,3.15885100493562

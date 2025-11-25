@@ -1,0 +1,73 @@
+"tissue","cluster","status","chr_status","obs_exp"
+"body","epithelial cell","female-biased","X",1.47072783063644
+"body","epithelial cell","male-biased","X",0.587708550424258
+"body","epithelial cell","female-biased","autosome",0.911856496829504
+"body","epithelial cell","male-biased","autosome",1.07720132596306
+"body","fat cell","female-biased","X",1.21836503337952
+"body","fat cell","male-biased","X",0.587080656673804
+"body","fat cell","female-biased","autosome",0.959111278833907
+"body","fat cell","male-biased","autosome",1.07731889869019
+"body","glial cell","female-biased","X",1.3387073535476
+"body","glial cell","male-biased","X",0.563597430406852
+"body","glial cell","female-biased","autosome",0.936577251761536
+"body","glial cell","male-biased","autosome",1.09107821726118
+"body","hemocyte","female-biased","X",1.37267930859401
+"body","hemocyte","male-biased","X",0.497291850358987
+"body","hemocyte","female-biased","autosome",0.930216023611306
+"body","hemocyte","male-biased","autosome",1.10360135318384
+"body","muscle cell","female-biased","X",1.16207991076654
+"body","muscle cell","male-biased","X",0.594643051573331
+"body","muscle cell","female-biased","autosome",0.969650634190868
+"body","muscle cell","male-biased","autosome",1.07590284479361
+"body","neuron","female-biased","X",1.28614538166688
+"body","neuron","male-biased","X",0.55294806035556
+"body","neuron","female-biased","autosome",0.954610574602267
+"body","neuron","male-biased","autosome",1.08371020682195
+"body","oenocyte","female-biased","X",1.42883855596103
+"body","oenocyte","male-biased","X",0.422698072805139
+"body","oenocyte","female-biased","autosome",0.919700238318443
+"body","oenocyte","male-biased","autosome",1.11768988109682
+"body","sensory neuron","female-biased","X",1.30539110719234
+"body","sensory neuron","male-biased","X",0.37296888776924
+"body","sensory neuron","female-biased","autosome",0.942815698853719
+"body","sensory neuron","male-biased","autosome",1.12708223303881
+"body","tracheolar cell","female-biased","X",1.17922508181488
+"body","tracheolar cell","male-biased","X",0.685456334278604
+"body","tracheolar cell","female-biased","autosome",0.966440211223918
+"body","tracheolar cell","male-biased","autosome",1.06806272421414
+"body","unannotated","female-biased","X",1.88690544514679
+"body","unannotated","male-biased","X",0.51310170687329
+"body","unannotated","female-biased","autosome",0.833927488819748
+"body","unannotated","male-biased","autosome",1.09117141254618
+"head","epithelial cell","female-biased","X",1.66115702479339
+"head","epithelial cell","male-biased","X",1.05928853754941
+"head","epithelial cell","female-biased","autosome",0.879296279218246
+"head","epithelial cell","male-biased","autosome",0.998765882372899
+"head","fat cell","female-biased","X",1.52272727272727
+"head","fat cell","male-biased","X",0.507575757575758
+"head","fat cell","female-biased","autosome",0.906774287943816
+"head","fat cell","male-biased","autosome",1.10827968526466
+"head","glial cell","female-biased","X",2.39944903581267
+"head","glial cell","male-biased","X",1.21818181818182
+"head","glial cell","female-biased","autosome",0.732746899348538
+"head","glial cell","male-biased","autosome",0.96722590714007
+"head","hemocyte","female-biased","X",2.28409090909091
+"head","hemocyte","male-biased","X",3.04545454545455
+"head","hemocyte","female-biased","autosome",1.42066293783239
+"head","hemocyte","male-biased","autosome",1.2914148780996
+"head","muscle cell","female-biased","X",2.76859504132231
+"head","muscle cell","male-biased","X",2.03030303030303
+"head","muscle cell","female-biased","autosome",2.68609816881569
+"head","muscle cell","male-biased","autosome",1.13632196552989
+"head","neuron","female-biased","X",2.19949494949495
+"head","neuron","male-biased","X",2.53787878787879
+"head","neuron","female-biased","autosome",0.772437356396584
+"head","neuron","male-biased","autosome",0.921894258149518
+"head","sensory neuron","female-biased","X",2.35777126099707
+"head","sensory neuron","male-biased","X",1.10743801652893
+"head","sensory neuron","female-biased","autosome",0.741019848212151
+"head","sensory neuron","male-biased","autosome",0.989208314120526
+"head","unannotated","female-biased","X",2.17532467532468
+"head","unannotated","male-biased","X",2.34265734265734
+"head","unannotated","female-biased","autosome",0.777235103951842
+"head","unannotated","male-biased","autosome",0.744019928569285
