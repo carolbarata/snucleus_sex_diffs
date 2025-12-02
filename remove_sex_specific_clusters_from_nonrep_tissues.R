@@ -12,7 +12,7 @@ library(SeuratDisk)
 library(loomR)
 
 #### Set working directory ####
-setwd("/media/cdecastr/Samsung USB/fly_cell_atlas_proj/data")
+setwd("./fly_cell_atlas_proj/data")
 
 #### Loop over all tissue samples ####
 tissues <- c('Antenna', 'Malpighian_tubule', 'Body_wall',
@@ -91,5 +91,6 @@ for (tissue in tissues) {
   rm(tissue_seurat_filtered)
   gc()
 }
+
 
 
