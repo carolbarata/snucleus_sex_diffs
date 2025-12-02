@@ -212,3 +212,83 @@ for (tissue in tissues) {
   rm(cell_data)
   gc()
 }
+
+#### Read in data from csv ####
+x_a_ratio_df <- list.files(path = "./",
+                           pattern = "x_a_normalised_expression_ratio_n_max_expression_data_(.*)_relaxed_after_filtering[.]csv") %>%
+  map_df(~ read.table(., header = TRUE))
+
+x_a_ratio_df <- x_a_ratio_df %>%
+  filter(sex != "mix")
+
+x_a_ratio_df$tissue <- gsub("_", " ",
+                            x_a_ratio_df$tissue)
+
+
+#### Add stringent annotation to the data frame ####
+## Create empty list for stringent annotation data ##
+s_annotation_df <- vector("list", length(tissues))
+
+for (i in 1:length(tissues)) {
+  tissue <- tissues[i]
+  ## Read in h5Seurat file ##
+  tissue_seurat <- LoadH5Seurat(paste0('./r_', tolower(tissue),
+                                       "_cell_type_filt_decontx_stringent_filt_sctransformed.h5Seurat"))
+  ## Extract s_annotation info ##
+  tissue_s_annotation <- as.data.frame(tissue_seurat@meta.data[,c('cellID',
+                                                                  'tissue',
+                                                                  'sex',
+                                                                  's_annotation')])
+  ## Add tissue s_annotation to dataframe variable ##
+  s_annotation_df[[i]] <- as.data.frame(tissue_s_annotation)
+  rm(tissue_seurat)
+  rm(tissue_s_annotation)
+  gc()
+}
+
+s_annotation_df <- dplyr::bind_rows(s_annotation_df)
+colnames(s_annotation_df)[1] <- "cell_id"
+
+s_annotation_df$tissue <- gsub("proboscis_and_maxpalp",
+                               "proboscis_and_maxillary_palps",
+                               s_annotation_df$tissue)
+
+s_annotation_df$tissue <- gsub("testis", "gonad", s_annotation_df$tissue)
+s_annotation_df$tissue <- gsub("ovary", "gonad", s_annotation_df$tissue)
+s_annotation_df$tissue <- gsub("_", " ", s_annotation_df$tissue)
+
+## Merge with X:A data frame ##
+x_a_ratio_df$tissue <- gsub("testis", "gonad", x_a_ratio_df$tissue)
+x_a_ratio_df$tissue <- gsub("ovary", "gonad", x_a_ratio_df$tissue)
+
+x_a_ratio_df_plus <- left_join(x = x_a_ratio_df,
+                               y = s_annotation_df)
+
+## Manually replace gonadal pigment cell annotation ##
+gonad_pigment_cells <- which(x_a_ratio_df_plus$s_annotation == 'pigment cell' &
+                               x_a_ratio_df_plus$tissue == 'gonad')
+
+x_a_ratio_df_plus[gonad_pigment_cells, 's_annotation'] <- 'male gonad pigment cell'
+
+### Use broadly annotated cell types ###
+annotation <- read.csv("./fly_cell_atlas_proj/data/cell_types_and_broad_annotation2.csv",
+                       header = TRUE)
+
+## Remove duplicates
+annotation <- annotation[!duplicated(annotation),]
+
+colnames(annotation) <- c("s_annotation", "broad_annotation")
+
+## Merge with stringent annotation ##
+x_a_ratio_df_plus <- left_join(x_a_ratio_df_plus,
+                               annotation)
+
+tissues_in_df <- unique(x_a_ratio_df_plus$tissue)
+x_a_ratio_df_plus <- subset(x_a_ratio_df_plus, tissue %in% tissues_in_df[tissues_in_df != 'body'] |
+                              tissue == 'body' &
+                              broad_annotation != 'female reproductive system')
+
+#### Save X:A table to file ####
+write.csv(x_a_ratio_df_plus,
+          file = "x_a_normalised_expression_ratio_n_max_expression_data_relaxed_after_filtering_all_tissues.csv",
+          row.names = FALSE)
