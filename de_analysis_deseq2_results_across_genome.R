@@ -7,9 +7,6 @@
 # Load libraries
 library(tidyverse)
 
-# Set working directory
-setwd("/media/cdecastr/Samsung USB1/fca_relaxed_loom/")
-
 # Loop over all tissue samples
 tissues <- c('Head', 'Body')
 
@@ -237,4 +234,5 @@ cluster_fet <- cluster_fet %>%
 write.csv(cluster_fet,
           "fet_sex_biased_genes_autosomes_and_xchr_per_cluster_plus_padj.csv",
           row.names = FALSE)
+
 
